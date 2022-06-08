@@ -1,6 +1,6 @@
 @font-face {
   font-family: "gold";
-  src: url(../fonts/gold.ttf);
+  src: url("../fonts/gold.ttf");
 }
 
 html[light-mode="dark"] {
