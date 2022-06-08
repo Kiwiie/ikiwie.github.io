@@ -1,0 +1,179 @@
+@font-face {
+  font-family: "gold";
+  src: url(../fonts/gold.ttf);
+}
+
+html[light-mode="dark"] {
+  background-color: #1e1e1ffc;
+  color: #ced4e2;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+  color: var(--text);
+  font-family: "gold", sans-serif;
+  background-color: var(--bg);
+}
+
+#particles-js {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+.section {
+  background-color: rgb(63, 25, 170);
+  justify-content: center;
+  align-items: center;
+}
+
+.text .header {
+  font-weight: bold;
+}
+
+.text {
+  font-size: 35px;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.animated-text span {
+  display: none;
+  line-height: 1;
+}
+
+.animated-text span.active {
+  display: inline;
+}
+
+.animated-text:after {
+  content: ".";
+  display: inline;
+  width: 6px;
+  text-indent: 0;
+  background: var(--col-icon);
+  animation: blink 0.1s infinite alternate;
+}
+
+.datawords {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/*Social icons*/
+
+:root {
+  --link-size: 64px;
+  --trans-props: all 0.2s ease;
+  --link-size-footer-b: 40px;
+  --link-size-footer-s: 30px;
+}
+
+a.socialicon {
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.socialicon {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  width: var(--link-size);
+  height: var(--link-size);
+  background-color: #fff;
+  margin: 8px;
+  border-radius: 50%;
+  box-shadow: 2px 5px 5px var(--shadow-col);
+  text-decoration: none;
+  transition: var(--trans-props);
+}
+
+
+
+/* Social icon in dark mode */
+html[light-mode="dark"] .socialicon {
+  background-color: #141516;
+}
+
+.amazon {
+  background-image: url("https://icons.iconarchive.com/icons/sicons/basic-round-social/256/amazon-icon.png");
+  background-size: cover;
+  width: 100px;
+  -webkit-appearance: none;
+  background-size: cover;
+  outline: none;
+}
+
+.instagram {
+  background-image: url("https://www.freepnglogos.com/uploads/logo-ig-png/logo-ig-instagram-png-transparent-instagram-images-pluspng-3.png");
+  background-size: cover;
+  width: 100px;
+  -webkit-appearance: none;
+  background-size: cover;
+  outline: none;
+}
+
+.imail {
+  background-image: url("https://www.pngall.com/wp-content/uploads/2/Email-PNG-Photo.png");
+  background-size: cover;
+  width: 100px;
+  -webkit-appearance: none;
+  background-size: cover;
+  outline: none;
+}
+
+/*
+----------------------------
+   SOCIAL MEDIA ANIMATIONS
+----------------------------
+*/
+
+.socialicon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.16);
+}
+
+.socialicon:hover:after {
+  transform: translate(0) scale(1.2);
+}
+
+.socialicon:hover i {
+  color: #fff;
+}
+
+a:hover {
+  color: transparent;
+}
+
+@media (max-width: 320px) and (max-height: 440px) {
+  .text {
+    margin-top: 4rem;
+  }
+
+.footer {
+  margin-top: 6rem;
+  }
+}
